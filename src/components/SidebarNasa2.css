@@ -1,0 +1,187 @@
+/* Estilo general para la barra lateral con efecto glassy */
+  .sidebar2 {
+    position: fixed;
+    top: 0;
+    left: -330px;
+    width: 330px;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(5px);
+    color: white;
+    transition: right 0.3s ease;
+    padding: 20px 10px;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    z-index: 1000;
+  }
+  
+  /* Clase que aplica cuando la barra lateral está abierta */
+  .sidebar.open {
+    left: 0;
+  }
+  
+  /* Estilo para el botón */
+  .toggle-btn {
+    position: fixed;
+    top: 20px;
+    right: 10px;
+    background-color: #444;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    transition: right 0.3s ease;
+    z-index: 1000;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Mueve el botón junto con la barra lateral cuando está abierta */
+  .toggle-btn.open {
+    left: 340px;
+  }
+  
+  /* Ajuste de la imagen dentro del botón */
+  .toggle-btn img {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .sidebar-content {
+    margin-top: 20px;
+    width: 100%; /* Asegura que el contenido utilice todo el ancho disponible */
+  }
+  
+  /* Estilo de la barra de búsqueda */
+  .search-bar {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    width: 100%;
+    padding-bottom: 15px;
+  }
+  
+  .search-input {
+    flex: 1;
+    padding: 4px 10px;
+    border-radius: 20px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    outline: none;
+    font-size: 15px;
+  }
+  
+  .search-input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+  }
+  
+  /* Estilos para los botones redondos */
+  .icon-btn {
+    background-color: #444;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin-left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .icon-btn img {
+    width: 20px;
+    height: 20px;
+  }
+  
+  /* Botón Random */
+  .random-btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1c1c1c;
+    color: #F91E48;
+    border: 2px solid #F91E48;
+    padding: 10px 20px;
+    border-radius: 30px;
+    width: 100%;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+  
+  .random-btn img.random-icon {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .random-btn:hover {
+    background-color: #000000;
+  }
+  
+  /* Estilos para los sliders */
+  .slider-container {
+    margin-top: 20px;
+    width: 100%;
+  }
+  
+  .slider-group {
+    margin-bottom: 15px;
+    width: 100%;
+  }
+  
+  .slider-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+  }
+  
+  input[type="range"] {
+    width: 100%;
+  }
+  
+  /* Sección de Exportar Imagen */
+  .export-section {
+    margin-top: 20px;
+  }
+  
+  .export-btn {
+    background-color: #444;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    width: 100%;
+    cursor: pointer;
+  }
+  
+  .export-btn:hover {
+    background-color: #555;
+  }
+  
+  .autocomplete-suggestions {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    background-color: rgb(45, 45, 45);
+    border: 1px solid #F91E48;
+    max-height: 150px;
+    overflow-y: auto;
+  }
+  
+  .autocomplete-suggestions li {
+    padding: 8px;
+    cursor: pointer;
+  }
+  
+  .autocomplete-suggestions li:hover {
+    background-color: #232323;
+    color: #F91E48;
+  }
+  

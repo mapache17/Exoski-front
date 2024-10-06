@@ -1,0 +1,118 @@
+/* Container for vertical centering */
+.planet-info-container {
+    display: flex;
+    justify-content: flex-start; /* Align horizontally to the left or right */
+    align-items: center;         /* Center vertically */
+    height: 100vh;               /* Full viewport height to center vertically */
+    padding: 0 20px;             /* Padding for separation from the edges */
+    box-sizing: border-box;      /* Ensure padding doesn't affect the width */
+    position: relative;
+    z-index: 900;
+  }
+  
+  /* Glassy card for Planet Info */
+  .planet-info-card {
+    background-color: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(5px);
+    padding: 20px;
+    border-radius: 15px;
+    width: 300px;
+    color: white;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    margin-left: 40px; /* Move the card a bit away from the left edge */
+    transition: all 0.3s ease;  /* Smooth transition when resizing */
+    overflow: hidden;  /* Hide content when collapsing */
+  }
+  
+  .planet-info-card.collapsed {
+    width: 50px;      /* Shrink width */
+    height: 50px;     /* Shrink height */
+    border-radius: 50%;  /* Make it circular */
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #444;
+  }
+  
+  /* Hidden content in collapsed state */
+  .planet-info-card.collapsed .card-content {
+    display: none;
+  }
+  
+  /* Show infoPlanet icon when collapsed */
+  .planet-info-card.collapsed .info-icon {
+    display: block;
+  }
+  
+  .info-icon {
+    width: 60%;
+    height: 60%;
+    border-radius: 50%;
+    object-fit: cover;
+    display: none;  /* Hidden in expanded state */
+  }
+  
+  /* Close button styling */
+  .close-btn {
+    background: none;
+    border: none;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+  }
+  
+  .close-btn img {
+    width: 20px;
+    height: 20px;
+  }
+  
+  /* Planet title styling */
+  .planet-title {
+    font-size: 24px;
+    margin-bottom: 15px;
+    font-weight: bold;
+  }
+  
+  /* Styling for each detail group */
+  .detail-group {
+    margin-bottom: 15px;
+    width: 100%;
+  }
+  
+  .detail-label {
+    font-size: 16px;
+    font-weight: bold;
+    display: block;
+    color: #F91E48;
+  }
+  
+  .detail-value {
+    font-size: 15px;
+    margin-top: 5px;
+    display: block;
+  }
+  
+  .coordinates {
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .detail-coord {
+    font-size: 15px;
+    margin-bottom: 5px;
+  }
+  
+  /* Divider styling */
+  .divider {
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    width: 100%;
+    margin: 10px 0;
+  }

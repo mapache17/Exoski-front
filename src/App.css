@@ -1,0 +1,56 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.App {
+  text-align: center;
+}
+
+
+.App-link {
+  color: #61dafb;
+}
+
+.div-general{
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Asegura que ocupe toda la ventana */
+  overflow: hidden; /* Esto es opcional, pero asegura que nada se salga del contenedor */
+}
+
+
+#myThreeJsCanvas{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 80%;
+  height: 80%;
+  z-index: 1100; 
+}
+ 
+.planet-name{
+  color: white;
+  z-index: 2;
+  position: absolute;
+  font-size: 3rem;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%); 
+}
