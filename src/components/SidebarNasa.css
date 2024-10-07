@@ -106,7 +106,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #444;
+  background-color: #1c1c1c;
   color: #F91E48;
   border: 2px solid #F91E48;
   padding: 10px 20px;
@@ -122,7 +122,7 @@
 }
 
 .random-btn:hover {
-  background-color: #555;
+  background-color: #0d0d0d;
 }
 
 /* Estilos para los sliders */
@@ -163,4 +163,24 @@ input[type="range"] {
 
 .export-btn:hover {
   background-color: #555;
+}
+.autocomplete-suggestions {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  background-color: rgb(45, 45, 45);
+  border: 1px solid rgb(45, 45, 45);
+  max-height: 150px;
+  overflow-y: auto;
+  
+}
+
+.autocomplete-suggestions li {
+  padding: 8px;
+  cursor: pointer;
+}
+
+.autocomplete-suggestions li:hover {
+  background-color: #232323;
+  color: #F91E48;
 }

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './SidebarNasa.css';
+import './SidebarNasa2.css';
 import openMenu from '../assets/openMenu.png';
 import closeMenu from '../assets/closeMenu.png';
 import iconoBuscar from '../assets/iconoBuscar.png';

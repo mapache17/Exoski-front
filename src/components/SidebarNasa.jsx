@@ -5,6 +5,7 @@ import closeMenu from '../assets/closeMenu.png';
 import iconoBuscar from '../assets/iconoBuscar.png';
 import iconoRandom from '../assets/iconoRandom.png';
 import { planetNames } from '../planetNames'; // Importar los nombres de planetas
+import html2canvas from 'html2canvas';
 
 function SidebarNasa({ onSearch }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -44,6 +45,44 @@ function SidebarNasa({ onSearch }) {
     onSearch(planet);  // Buscar el planeta seleccionado
   };
 
+  const handlePrint = () => {
+    window.print();
+  };
+
+  const handleScreenshot = () => {
+    const sidebarElement = document.querySelector('.sidebar');
+    const buttons = document.querySelectorAll('.toggle-btn, .volver-btn, .export-btn');
+
+    // Ocultar sidebar y botones antes de tomar la captura
+    sidebarElement.style.display = 'none';
+    buttons.forEach(button => button.style.display = 'none');
+
+    const canvasThreeJs = document.getElementById('myThreeJsCanvas');
+    const canvasDataUrl = canvasThreeJs.toDataURL(); // Captura del canvas de THREE.js
+
+    // Capturar el resto del DOM
+    html2canvas(document.documentElement, { scrollY: -window.scrollY }).then(canvas => {
+      // Restaurar visibilidad del sidebar y botones
+      sidebarElement.style.display = '';
+      buttons.forEach(button => button.style.display = '');
+
+      const context = canvas.getContext('2d');
+
+      // Crear una nueva imagen con el contenido del canvas THREE.js
+      const img = new Image();
+      img.src = canvasDataUrl;
+      img.onload = () => {
+        // Dibujar el contenido de THREE.js sobre el screenshot del DOM
+        context.drawImage(img, 0, 0);
+
+        // Descargar la imagen combinada
+        const link = document.createElement('a');
+        link.href = canvas.toDataURL('image/png');
+        link.download = 'screenshot_with_threejs.png';
+        link.click();
+      };
+    });
+  };
   return (
     <div>
       <button className={`toggle-btn ${isOpen ? 'open' : ''}`} onClick={toggleSidebar}>
@@ -105,7 +144,7 @@ function SidebarNasa({ onSearch }) {
 
           <h2>Export Image</h2>
           <div className="export-section">
-            <button className="export-btn">Export Image</button>
+            <button className="export-btn" onClick={handlePrint}>Export Image</button>
           </div>
         </div>
       </div>

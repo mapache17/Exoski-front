@@ -4,10 +4,9 @@
     justify-content: flex-start; /* Align horizontally to the left or right */
     align-items: center;         /* Center vertically */
     height: 100vh;               /* Full viewport height to center vertically */
-    padding: 0 20px;             /* Padding for separation from the edges */
+    padding: 0 5px;             /* Padding for separation from the edges */
     box-sizing: border-box;      /* Ensure padding doesn't affect the width */
     position: relative;
-    z-index: 900;
   }
   
   /* Glassy card for Planet Info */
@@ -15,6 +14,7 @@
     background-color: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(5px);
     padding: 20px;
+    z-index: 900;
     border-radius: 15px;
     width: 300px;
     color: white;
