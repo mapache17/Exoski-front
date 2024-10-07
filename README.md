@@ -1,8 +1,13 @@
-# React + Vite
+# ExoSky Web Version
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![image](https://github.com/user-attachments/assets/cf9d0f58-69a8-47a4-a2eb-eef5a0b78f40)
 
-Currently, two official plugins are available:
+![image](https://github.com/user-attachments/assets/4e411d64-ce46-42f3-a60a-2c221b813069)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![image](https://github.com/user-attachments/assets/e156d14c-bb21-470d-82c6-87c6df13bc7d)
+
+![image](https://github.com/user-attachments/assets/09444bea-0675-4e53-a6c5-d2aff4e499eb)
+
+![image](https://github.com/user-attachments/assets/4224178e-899e-4f16-9a7b-4bde1b9096b9)
+
+
